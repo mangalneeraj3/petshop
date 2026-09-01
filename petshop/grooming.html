@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book certified pet grooming and spa care at Samaria Pet Shop Jaipur. Medicated baths, organic shampoos, breed styling, nail clipping, and clinical hygiene." />
+  <meta name="keywords" content="Pet Grooming Jaipur, Dog Grooming Spa Jaipur, Dog Bathing Jaipur, Nail Clipping Pets Jaipur, Dog Styling M.I. Road, Cat Grooming Jaipur" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://samariapetshop.com/grooming.html" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://samariapetshop.com/grooming.html" />
+  <meta property="og:title" content="Professional Pet Grooming Spa & Styling | Samaria Pet Shop Jaipur" />
+  <meta property="og:description" content="Breed-specific styling, medicated ticks/fleas baths, and clinical pet hygiene in Jaipur." />
+  <meta property="og:image" content="https://samariapetshop.com/images/logo.png" />
+
+  <!-- JSON-LD Structured Data Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PetStore",
+    "name": "Samaria Professional Pet Grooming Spa",
+    "description": "Breed-specific haircuts, medicated baths, flea care, nail trim, and absolute hygiene services in Jaipur.",
+    "telephone": "+919799911111",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C1, Roop Plaza, M.I Road, Near JK Enterprise, Panch Batti, New Colony",
+      "addressLocality": "Jaipur",
+      "addressRegion": "Rajasthan",
+      "postalCode": "302001",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+  <title>Professional Pet Grooming Spa & Styling | Samaria Pet Shop Jaipur</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Samaria Pet Shop" style="height: 62px;" />
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <a href="pets.html">Pets <i class="fas fa-chevron-down" style="font-size:0.7em;"></i></a>
+          <div class="dropdown-content">
+            <a href="dogs.html">Dogs</a>
+            <a href="cats.html">Cats</a>
+            <a href="fish.html">Fish</a>
+            <a href="birds.html">Birds</a>
+            <a href="other.html">Other Pets</a>
+          </div>
+        </div>
+        <a href="services.html" class="active">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://wa.me/919799911111" target="_blank" class="nav-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp Us</span>
+        </a>
+        
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars" id="hamburgerIcon"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <div class="mobile-dropdown" style="border-bottom: 1px solid rgba(0,0,0,0.08);">
+      <a href="javascript:void(0)" onclick="var c=document.getElementById('mobileDropContent'), i=document.getElementById('mobileDropIcon'); if(c.style.display==='none'){c.style.display='flex'; i.className='fas fa-chevron-up';}else{c.style.display='none'; i.className='fas fa-chevron-down';}" style="display:flex; justify-content:space-between; align-items:center; border-bottom:none;">Pets <i class="fas fa-chevron-down" id="mobileDropIcon"></i></a>
+      <div class="mobile-dropdown-content" id="mobileDropContent" style="display:none; flex-direction:column; padding-left:15px; background:rgba(0,0,0,0.05); border-radius: 4px; margin-bottom: 8px;">
+        <a href="dogs.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Dogs</a>
+        <a href="cats.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Cats</a>
+        <a href="birds.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Birds</a>
+        <a href="fish.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Fish</a>
+        <a href="other.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Other Pets</a>
+      </div>
+    </div>
+    <a href="services.html" onclick="toggleMenu()">Services</a>
+    <a href="blog.html" onclick="toggleMenu()">Blog</a>
+    <a href="about.html" onclick="toggleMenu()">About Us</a>
+    <a href="contact.html" onclick="toggleMenu()">Contact Us</a>
+    <a href="https://wa.me/919799911111" target="_blank" style="color:#25D366; margin-top:4px;">
+      <i class="fab fa-whatsapp"></i> WhatsApp: 97999 11111
+    </a>
+  </div>
+
+  <main>
+    <!-- Floating Background Particles (Paw/Heart Drifter) -->
+    <div id="particle-container" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; overflow:hidden;"></div>
+
+    <!-- ====== GROOMING HERO ====== -->
+    <section class="groom-hero-wrap" style="background: linear-gradient(135deg, rgba(30, 7, 7, 0.86) 0%, rgba(185, 28, 28, 0.8) 100%), url('images/hero_banner.png') no-repeat center center / cover; color: #fff; padding: 180px 24px 120px; text-align: center; position: relative; overflow: hidden; z-index: 1;">
+      <!-- Subtle radial light effects -->
+      <div style="position: absolute; top: -150px; right: -100px; width: 450px; height: 450px; background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%); border-radius: 50%;"></div>
+      <div style="position: absolute; bottom: -100px; left: -100px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(185, 28, 28, 0.2) 0%, transparent 70%); border-radius: 50%;"></div>
+
+      <div class="container" style="position: relative; z-index: 2;">
+        <span class="section-label-gold" style="color: var(--gold); border: 1.5px solid var(--gold); padding: 6px 16px; border-radius: 30px; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; display: inline-block; margin-bottom: 20px; background: rgba(245,158,11,0.06);">Grooming Spa & Style</span>
+        <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 5vw, 4.2rem); font-weight: 800; margin-bottom: 20px; letter-spacing: -0.01em; line-height: 1.15; text-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+          Professional <span style="background: linear-gradient(to right, var(--gold-light), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Pet Grooming</span>
+        </h1>
+        <p style="font-size: 1.15rem; color: rgba(255,255,255,0.85); max-width: 700px; margin: 0 auto; line-height: 1.8; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300;">
+          Indulge your furry friend in therapeutic spa treatments, precise styling, and premium organic coat care in a peaceful stress-free environment.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== GROOMING BODY SECTION ====== -->
+    <section class="section-pad" style="background: var(--cream); position: relative; z-index: 1; padding-top: 100px;">
+      <div class="container">
+        <div class="why-layout" style="align-items: center; gap: 60px;">
+          
+          <!-- Image and Trust badge -->
+          <div class="why-image-wrap reveal">
+            <img src="images/hero_banner_2.png" alt="Pet Grooming Support" class="why-img-main" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); border: 4px solid var(--white); object-position: center;">
+            
+            <!-- Dynamic Gold Seal overlay -->
+            <div class="luxury-seal" style="top: -25px; right: -25px;">
+              <div class="seal-inner">
+                <i class="fas fa-cut"></i>
+                <span>100% ORGANIC<br>PRODUCTS USED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description and services grid -->
+          <div class="reveal reveal-delay-1">
+            <span class="section-label" style="color: var(--red);">The Ultimate Spa Experience</span>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.6rem); font-weight: 800; margin-bottom: 20px; line-height: 1.25; color: var(--text);">
+              Fabulous Looks & Radiant Health
+            </h2>
+            <p style="color: var(--text-soft); font-size: 1.05rem; line-height: 1.8; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; margin-bottom: 30px;">
+              At Samaria Pet Shop, we believe grooming is essential to your companion's happiness. Our international certified stylists utilize custom pH-balanced coat formulas to deliver stunning transformations.
+            </p>
+            
+            <!-- Cards Grid -->
+            <div>
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 800; margin-bottom: 20px; color: var(--text);">Our Grooming Services Include:</h3>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; font-family: 'Plus Jakarta Sans', sans-serif;">
+                
+                <!-- Styling Card -->
+                <div style="background: var(--white); padding: 25px; border-radius: var(--radius); border-left: 4px solid var(--red); box-shadow: var(--shadow); transition: var(--transition);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow)';">
+                  <h4 style="color: var(--red); font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-scissors"></i> Custom Styling
+                  </h4>
+                  <p style="color: var(--text-soft); font-size: 0.88rem; line-height: 1.6; font-weight: 300;">Breed-specific standard trims, summer clips, and luxury creative hair styling designed by top experts.</p>
+                </div>
+                
+                <!-- Bath Card -->
+                <div style="background: var(--white); padding: 25px; border-radius: var(--radius); border-left: 4px solid var(--gold); box-shadow: var(--shadow); transition: var(--transition);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow)';">
+                  <h4 style="color: var(--gold); font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-bath"></i> Therapeutic Baths
+                  </h4>
+                  <p style="color: var(--text-soft); font-size: 0.88rem; line-height: 1.6; font-weight: 300;">Deep cleansing medicated baths with organic anti-dandruff, anti-tick, and moisturizing conditioners.</p>
+                </div>
+                
+                <!-- Hygiene Card -->
+                <div style="background: var(--white); padding: 25px; border-radius: var(--radius); border-left: 4px solid var(--red-light); box-shadow: var(--shadow); transition: var(--transition);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow)';">
+                  <h4 style="color: var(--red-light); font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-paw"></i> Nail & Paw Therapy
+                  </h4>
+                  <p style="color: var(--text-soft); font-size: 0.88rem; line-height: 1.6; font-weight: 300;">Pedicure clipping, claw grinding, therapeutic pad massage butter, and antiseptic sanitization checks.</p>
+                </div>
+                
+                <!-- Oral Card -->
+                <div style="background: var(--white); padding: 25px; border-radius: var(--radius); border-left: 4px solid var(--black-light); box-shadow: var(--shadow); transition: var(--transition);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow)';">
+                  <h4 style="color: var(--black-light); font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-smile"></i> Dental & Eye Hygiene
+                  </h4>
+                  <p style="color: var(--text-soft); font-size: 0.88rem; line-height: 1.6; font-weight: 300;">Professional tartar-control teeth brushing, herbal ear flush, and tear-stain cleansing wraps.</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div style="margin-top: 40px; display: flex; gap: 20px; flex-wrap: wrap;">
+              <a href="#" class="btn btn-primary" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; padding: 15px 32px;" onclick="openModal('Grooming Appointment'); return false;">Book Appointment</a>
+              <a href="https://wa.me/919799911111" target="_blank" class="btn" style="background:rgba(185,28,28,0.06); color:var(--red); border:1.5px solid rgba(185,28,28,0.25); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; padding: 15px 32px;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name" style="margin-bottom: 20px; display: inline-block; background-color: #ffffff; padding: 10px 20px; border-radius: var(--radius);"><img src="images/logo.png" alt="Samaria Pet Shop" style="height: 95px;" /></div>
+        <div class="footer-tagline">Your Pet · We Care</div>
+        <p class="footer-about">Providing healthy, certified, and loving pets to families across India since 1957. Your pet's happiness is our priority.</p>
+        <div class="footer-socials" style="margin-bottom: 20px;">
+          <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919799911111" target="_blank" class="footer-social"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="footer-social"><i class="fab fa-youtube"></i></a>
+        </div>
+        <!-- Footer Trust Seals -->
+        <div class="footer-trust-seals" style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <div class="mini-seal"><i class="fas fa-award"></i> KCI Registered</div>
+          <div class="mini-seal"><i class="fas fa-shield-virus"></i> Vet Certified</div>
+          <div class="mini-seal"><i class="fas fa-truck-moving"></i> Safe Delivery</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="pets.html">Shop by Pet</a></li>
+          <li><a href="blog.html">Our Blog</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Pet Categories</h4>
+        <ul>
+          <li><a href="dogs.html">Dogs</a></li>
+          <li><a href="cats.html">Cats</a></li>
+          <li><a href="birds.html">Birds</a></li>
+          <li><a href="fish.html">Fish</a></li>
+          <li><a href="other.html">Other Pets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>FAQ Questions</h4>
+        <ul>
+          <li><a href="faq.html#delivery">Do you deliver pan-India?</a></li>
+          <li><a href="faq.html#vaccination">Are the pets vaccinated?</a></li>
+          <li><a href="faq.html#returns">What is the return policy?</a></li>
+          <li><a href="faq.html#boarding">Do you offer pet boarding?</a></li>
+          <li><a href="faq.html#grooming">How do I book grooming?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#fff;font-size:.88rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px;">Contact Us</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>C1, Roop Plaza, M.I Road, Near JK Enterprise, Panch Batti, New Colony, Jaipur, Rajasthan 302001</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+919799911111" style="color:rgba(255,255,255,0.65);transition:color 0.2s;" onmouseover="this.style.color='#D4A445'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">+91 97999 11111</a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:samariapetshop24@gmail.com" style="color:rgba(255,255,255,0.65);transition:color 0.2s;" onmouseover="this.style.color='#D4A445'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">samariapetshop24@gmail.com</a>
+        </div>
+        <a href="https://wa.me/919799911111" target="_blank" class="btn btn-primary" style="margin-top:10px; font-size:0.82rem; padding:10px 20px;">
+          <i class="fab fa-whatsapp"></i> WhatsApp Us
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Samaria Pet Shop. All rights reserved.</p>
+      <p><a href="#" style="color:rgba(255,255,255,0.35); transition:color 0.2s;" onmouseover="this.style.color='#D4A445'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" style="color:rgba(255,255,255,0.35); transition:color 0.2s;" onmouseover="this.style.color='#D4A445'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Terms of Use</a></p>
+    </div>
+  </footer>
+
+  <!-- ====== LUXURY BOOKING MODAL ====== -->
+  <div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)" style="z-index: 10000;">
+    <div class="modal-box" style="border-radius: var(--radius-lg); overflow: hidden; background: #fff; max-width: 500px; padding: 40px; box-shadow: var(--shadow-lg); border: 1px solid rgba(185,28,28,0.06); animation: modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+      <button class="modal-close" style="top: 20px; right: 20px; font-size: 1.2rem; color: var(--text-soft); background: none; border: none; cursor: pointer; transition: color 0.2s;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--text-soft)'" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      
+      <div class="modal-title" style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 800; color: var(--text); margin-bottom: 8px;">Book <span id="modalPetName" style="color: var(--red);">Support</span></div>
+      <p class="modal-sub" style="font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-soft); font-size: 0.9rem; margin-bottom: 24px; font-weight: 300;">Secure your session and we will contact you via WhatsApp shortly to finalize your schedule.</p>
+      
+      <form id="enquiryForm" onsubmit="handleEnquiry(event)">
+        <div class="form-group" style="margin-bottom: 16px;">
+          <label for="enquiryName" style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.05em; margin-bottom: 8px;">Your Name</label>
+          <input type="text" id="enquiryName" placeholder="e.g. Rahul Sharma" style="width: 100%; padding: 12px 14px; border: 1px solid var(--cream-dark); border-radius: var(--radius); outline: none; background: var(--cream); font-family: 'Plus Jakarta Sans', sans-serif; transition: var(--transition);" onfocus="this.style.borderColor='var(--red)'; this.style.background='#fff';" onblur="this.style.borderColor='var(--cream-dark)'; this.style.background='var(--cream)';" required />
+        </div>
+        <div class="form-group" style="margin-bottom: 16px;">
+          <label for="enquiryPhone" style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.05em; margin-bottom: 8px;">WhatsApp Phone Number</label>
+          <input type="tel" id="enquiryPhone" placeholder="10-digit mobile number" pattern="[0-9]{10}" style="width: 100%; padding: 12px 14px; border: 1px solid var(--cream-dark); border-radius: var(--radius); outline: none; background: var(--cream); font-family: 'Plus Jakarta Sans', sans-serif; transition: var(--transition);" onfocus="this.style.borderColor='var(--red)'; this.style.background='#fff';" onblur="this.style.borderColor='var(--cream-dark)'; this.style.background='var(--cream)';" required />
+        </div>
+        <div class="form-group" style="margin-bottom: 24px;">
+          <label for="enquiryMsg" style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.05em; margin-bottom: 8px;">Specific Notes / Preferences</label>
+          <textarea id="enquiryMsg" placeholder="E.g. pet age, pet breed, preferred slot timings..." style="width: 100%; padding: 12px 14px; border: 1px solid var(--cream-dark); border-radius: var(--radius); outline: none; background: var(--cream); font-family: 'Plus Jakarta Sans', sans-serif; resize: vertical; rows: 3; transition: var(--transition);" onfocus="this.style.borderColor='var(--red)'; this.style.background='#fff';" onblur="this.style.borderColor='var(--cream-dark)'; this.style.background='var(--cream)';"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.95rem; padding: 14px 20px;">
+          <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Request Secure Booking
+        </button>
+        <div id="enquiryFeedback" class="form-feedback" style="text-align: center; font-size: 0.88rem; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; margin-top: 15px;"></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // =============================================
+    // NAVBAR SCROLL EFFECT
+    // =============================================
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // =============================================
+    // MOBILE MENU
+    // =============================================
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    let menuOpen = false;
+
+    function toggleMenu() {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.add('open');
+        hamburgerIcon.className = 'fas fa-times';
+      } else {
+        mobileMenu.classList.remove('open');
+        hamburgerIcon.className = 'fas fa-bars';
+      }
+    }
+
+    // =============================================
+    // SCROLL REVEAL
+    // =============================================
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // =============================================
+    // DYNAMIC FLOATING PARTICLES GENERATOR
+    // =============================================
+    const particleContainer = document.getElementById('particle-container');
+    const particlePool = ['<i class="fa-solid fa-paw"></i>', '<i class="fa-solid fa-heart"></i>'];
+    
+    function createParticle() {
+      if (document.hidden) return;
+      const element = document.createElement('div');
+      element.className = 'floating-particle';
+      element.innerHTML = particlePool[Math.floor(Math.random() * particlePool.length)];
+      
+      const size = Math.random() * 16 + 10; // 10px to 26px
+      const left = Math.random() * 100; // 0% to 100% viewport width
+      const duration = Math.random() * 8 + 6; // 6s to 14s
+      const delay = Math.random() * 3;
+      
+      element.style.fontSize = `${size}px`;
+      element.style.left = `${left}%`;
+      element.style.animationDuration = `${duration}s`;
+      element.style.animationDelay = `${delay}s`;
+      
+      particleContainer.appendChild(element);
+      
+      setTimeout(() => {
+        element.remove();
+      }, (duration + delay) * 1000);
+    }
+    
+    for(let i=0; i<8; i++) {
+      createParticle();
+    }
+    setInterval(createParticle, 1200);
+
+    // =============================================
+    // MODAL INTERACTIVE CONTROLLERS
+    // =============================================
+    function openModal(serviceTitle) {
+      document.getElementById('modalPetName').textContent = serviceTitle;
+      document.getElementById('enquiryForm').reset();
+      document.getElementById('enquiryFeedback').className = 'form-feedback';
+      document.getElementById('enquiryFeedback').textContent = '';
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function handleOverlayClick(e) {
+      if (e.target === document.getElementById('modalOverlay')) closeModal();
+    }
+
+    function handleEnquiry(e) {
+      e.preventDefault();
+      
+      const serviceNameEl = document.getElementById('modalPetName');
+      const serviceName = serviceNameEl ? serviceNameEl.textContent : 'General Grooming Request';
+      const name = document.getElementById('enquiryName').value;
+      const phone = document.getElementById('enquiryPhone').value;
+      const msg = document.getElementById('enquiryMsg').value;
+      
+      const newEnquiry = {
+        id: 'GRM-' + Math.floor(Math.random() * 10000),
+        date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+        petName: serviceName,
+        customerName: name,
+        phone: phone,
+        message: msg,
+        status: 'New'
+      };
+      
+      const fb = document.getElementById('enquiryFeedback');
+      fb.className = 'form-feedback';
+      fb.style.color = 'var(--text)';
+      fb.textContent = 'Securing your request...';
+
+      // Build beautiful pre-filled WhatsApp message
+      const whatsappText = `Hello Samaria Pet Shop! 🐾\n\nI would like to book *${serviceName}*.\n\n*My Booking Details:*\n• *Your Name:* ${name}\n• *WhatsApp Phone:* ${phone}\n• *Specific Notes/Preferences:* ${msg || 'None'}\n\nPlease finalize my schedule! Thank you.`;
+      const whatsappUrl = `https://wa.me/919799911111?text=${encodeURIComponent(whatsappText)}`;
+      
+      fetch('api/enquiries.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newEnquiry)
+      })
+      .then(res => res.json())
+      .then(data => {
+        fb.style.color = 'green';
+        fb.textContent = '✓ Secured! Opening WhatsApp to finalize schedule...';
+        setTimeout(() => {
+          window.open(whatsappUrl, '_blank');
+          closeModal();
+        }, 1200);
+      })
+      .catch(err => {
+        fb.style.color = 'green';
+        fb.textContent = '✓ Secured! Opening WhatsApp to finalize schedule...';
+        setTimeout(() => {
+          window.open(whatsappUrl, '_blank');
+          closeModal();
+        }, 1200);
+      });
+    }
+  </script>
+</body>
+</html>

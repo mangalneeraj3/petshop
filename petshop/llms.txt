@@ -1,0 +1,55 @@
+# Samaria Pet Shop - AI Assistant Repo Guide
+
+Samaria Pet Shop (established 1957 in Jaipur, Rajasthan, India) is a premier certified-healthy pet store, styling studio, and boarding hostel. This file serves as a map for LLMs, developer agents, and AI crawlers navigating this codebase.
+
+## 📁 Repository Structure Overview
+
+- **`/` (Root Folder)**: Public-facing client pages styled using Vanilla CSS (`style.css`) and responsive client interactions (`script.js`).
+- **`/admin/`**: Secured backend portal for updating catalogs, reviewing user enquiries, editing blogs, and managing dashboard analytics.
+- **`/api/`**: Database endpoints connecting forms and admin portals to the MySQL/MariaDB database server.
+- **`/images/`**: Site assets including the logo, brand banners, and animal catalog graphics.
+
+---
+
+## 🧭 Public Sitemap & Routes
+
+- **Homepage (`index.html`)**: Landing page showcasing featured premium pets, client reviews, certification metrics, and services.
+- **Adopt Catalogs (`pets.html`)**: Multi-category collection panel for puppies, kittens, birds, and fish:
+  - **Dogs (`dogs.html`)**: Certified pedigree puppies with health clearance profiles.
+  - **Cats (`cats.html`)**: Premium Persian kittens and British Shorthairs.
+  - **Exotic Birds (`birds.html`)**: Interactive cockatoos, budgies, and finches.
+  - **Aquariums (`fish.html`)**: Colorful bettas, guppies, and clean tank guides.
+  - **Other Small Pets (`other.html`)**: Rabbits, hamsters, and premium feeds.
+- **Care Services (`services.html`)**: Full hub detailing operational support facilities:
+  - **Hostel Boarding (`boarding.html`)**: Climate-controlled luxury suites with continuous surveillance.
+  - **Aesthetic Grooming (`grooming.html`)**: Specialized hydro-baths, detangling, and custom styling.
+  - **Obedience Training (`training.html`)**: Certified animal behavior therapy classes.
+  - **Vet Assistance (`veterinary.html`)**: Professional clinical examinations and regular vaccination schedules.
+- **Guides & Contact**:
+  - **Blog hub (`blog.html`)**: Pet-care tips, nutritional instructions, and SEO guides.
+  - **Help Desk (`faq.html`)**: Frequently Asked Questions.
+  - **Contact Desk (`contact.html`)**: Map directions, WhatsApp buttons, and secure booking fields.
+
+---
+
+## 🛠️ API & Database Design
+
+The system runs on a MySQL database backend (see [setup_database.sql](file:///C:/Users/Lalit/Desktop/project/setup_database.sql) for structure) with PHP integrations:
+- **`api/get_pets.php`**: Retrieves listings categorized by species.
+- **`api/add_pet.php`**: Registers a new animal record into the system database.
+- **`api/delete_pet.php`**: Permanently removes active pet listings from the database.
+- **`api/enquiries.php`**: Handles contact submissions and booking queries.
+- **`api/get_enquiries.php`**: Lists active pipeline inquiries.
+- **`api/update_enquiry_status.php`**: Modifies the pipeline status of a query (`New`, `Contacted`, `Resolved`).
+- **`api/blogs.php`**: Handles creation, listing, and deletion of news/blog articles.
+
+---
+
+## 🌐 SEO, Schemas & Discovery Metadata
+
+- **Favicon Icon**: Configured across all pages referencing the brand logo:
+  - Root: `images/logo.png`
+  - Admin: `../images/logo.png`
+- **Structured Schema Markup**: Integrated via dynamic `PetStore` / `LocalBusiness` JSON-LD structures to identify Jaipur, India location metadata.
+- **SEO Elements**: Includes clean canonical tags, robot directories (`robots.txt`), Open Graph details, and index priorities.
+- **Google Analytics**: Structured Tag placeholders (`G-XXXXXXXXXX`) inside the `<head>` of all HTML files.

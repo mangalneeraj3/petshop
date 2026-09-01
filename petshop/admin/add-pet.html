@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure Admin Dashboard for Samaria Pet Shop.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Add / Edit Pet | Samaria Admin Portal</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --red: #B91C1C;
+      --red-dark: #7F1D1D;
+      --gold: #D4A445;
+      --gold-light: #F59E0B;
+      --black: #0B0B0C;
+      --black-light: #121214;
+      --cream: #FDFBF7;
+      --cream-dark: #F4EFEB;
+      --white: #FFFFFF;
+      --sidebar: #121214;
+      --text: #1F2937;
+      --text-soft: #6B7280;
+      --radius: 12px;
+      --radius-lg: 18px;
+      --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+      --shadow-lg: 0 20px 40px rgba(185, 28, 28, 0.05);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ====== SIDEBAR ====== */
+    .sidebar {
+      width: 280px;
+      background: var(--sidebar);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid rgba(212, 164, 69, 0.12);
+      z-index: 10;
+      position: relative;
+    }
+
+    .sidebar-brand {
+      padding: 30px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
+    }
+
+    .sidebar-brand img {
+      height: 64px;
+      background: var(--white);
+      padding: 8px 18px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: var(--transition);
+    }
+
+    .sidebar-brand img:hover {
+      transform: scale(1.03);
+    }
+
+    .sidebar-nav {
+      flex: 1;
+      padding: 24px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .nav-item {
+      padding: 14px 16px;
+      color: #9CA3AF;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-radius: var(--radius);
+      font-size: 0.94rem;
+      font-weight: 500;
+      transition: var(--transition);
+      border-left: 3px solid transparent;
+    }
+
+    .nav-item:hover, .nav-item.active {
+      background: rgba(255, 255, 255, 0.03);
+      color: #fff;
+      border-left-color: var(--gold);
+    }
+
+    .nav-item i {
+      font-size: 1.1rem;
+      transition: var(--transition);
+    }
+
+    .nav-item:hover i, .nav-item.active i {
+      color: var(--gold);
+    }
+
+    .logout-btn {
+      padding: 18px 24px;
+      color: #F87171;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .logout-btn:hover {
+      background: rgba(239, 68, 68, 0.05);
+      color: #EF4444;
+    }
+
+    /* ====== MAIN AREA ====== */
+    .main-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 40px 50px;
+      position: relative;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      border-bottom: 1.5px solid var(--cream-dark);
+      padding-bottom: 24px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--black);
+      letter-spacing: -0.01em;
+    }
+
+    .header h1 span {
+      background: linear-gradient(to right, var(--red), var(--red-dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .user-profile-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--white);
+      padding: 8px 16px;
+      border-radius: 30px;
+      border: 1px solid rgba(212, 164, 69, 0.12);
+      box-shadow: var(--shadow);
+    }
+
+    .user-avatar {
+      width: 32px;
+      height: 32px;
+      background: var(--red);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .user-name {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    /* ====== CARDS ====== */
+    .card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(212, 164, 69, 0.08);
+      position: relative;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--red);
+      margin-bottom: 30px;
+      border-bottom: 1.5px solid var(--cream-dark);
+      padding-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* ====== FORMS ====== */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 0.8rem;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      background: var(--cream);
+      border: 1.5px solid var(--cream-dark);
+      border-radius: var(--radius);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.96rem;
+      color: var(--text);
+      outline: none;
+      transition: var(--transition);
+      box-sizing: border-box;
+    }
+
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--gold);
+      background: var(--white);
+      box-shadow: 0 0 15px rgba(212, 164, 69, 0.1);
+    }
+
+    .form-group textarea {
+      height: 140px;
+      resize: vertical;
+    }
+
+    /* Custom File Input Container */
+    .file-drop-area {
+      border: 2px dashed rgba(212, 164, 69, 0.3);
+      background: var(--cream);
+      padding: 30px;
+      border-radius: var(--radius);
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .file-drop-area:hover {
+      border-color: var(--gold);
+      background: var(--white);
+    }
+
+    .file-drop-area i {
+      font-size: 2.2rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+      transition: var(--transition);
+    }
+
+    .file-drop-area:hover i {
+      transform: translateY(-3px);
+    }
+
+    .file-drop-area span {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      font-weight: 500;
+    }
+
+    .file-drop-area input[type="file"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    /* Live Preview Area */
+    .preview-container {
+      margin-top: 15px;
+      display: none;
+      align-items: center;
+      gap: 15px;
+      background: var(--white);
+      padding: 12px;
+      border-radius: var(--radius);
+      border: 1px solid var(--cream-dark);
+    }
+
+    .preview-image {
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 2px solid var(--cream-dark);
+    }
+
+    .preview-info {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+      color: #fff;
+      border: none;
+      padding: 16px 35px;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: var(--transition);
+      box-shadow: 0 4px 20px rgba(185, 28, 28, 0.2);
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(185, 28, 28, 0.3);
+      background: linear-gradient(135deg, #D32F2F 0%, var(--red) 100%);
+    }
+
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+  </style>
+  <link rel="icon" type="image/png" href="../images/logo.png" />
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-brand">
+    <img src="../images/logo.png" alt="Samaria Admin">
+  </div>
+  <div class="sidebar-nav">
+    <a href="dashboard.html" class="nav-item"><i class="fas fa-chart-line"></i> Dashboard Overview</a>
+    <a href="add-pet.html" class="nav-item active"><i class="fas fa-plus-circle"></i> Add New Pet</a>
+    <a href="inventory.html" class="nav-item"><i class="fas fa-list"></i> Manage Inventory</a>
+    <a href="blogs.html" class="nav-item"><i class="fas fa-blog"></i> Manage Blogs</a>
+    <a href="enquiries.html" class="nav-item"><i class="fas fa-envelope"></i> View Enquiries</a>
+    <a href="settings.html" class="nav-item"><i class="fas fa-shield-alt"></i> Security Settings</a>
+  </div>
+  <a onclick="logout()" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Secure Logout</a>
+</div>
+
+<div class="main-content">
+  <div class="header">
+    <h1><span>Add New Pet</span></h1>
+    <div class="user-profile-badge">
+      <div class="user-avatar">A</div>
+      <div class="user-name">Administrator</div>
+    </div>
+  </div>
+
+  <div class="card" style="max-width: 850px; margin: 0 auto;">
+    <h2><span><i class="fas fa-paw"></i> Pet Specifications</span></h2>
+    <form id="addPetForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="petName">Pet Name / Breed</label>
+          <input type="text" id="petName" required placeholder="e.g. Golden Retriever Puppy">
+        </div>
+        <div class="form-group">
+          <label for="petCategory">Category</label>
+          <select id="petCategory" required>
+            <option value="dogs">Dog</option>
+            <option value="cats">Cat</option>
+            <option value="birds">Bird</option>
+            <option value="fish">Fish</option>
+            <option value="other">Other Pet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="petGender">Gender</label>
+          <select id="petGender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="petAge">Age</label>
+          <input type="text" id="petAge" required placeholder="e.g. 2 Months">
+        </div>
+        
+        <div class="form-group full">
+          <label>Pet Portrait Image</label>
+          <div class="file-drop-area">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <span>Drag & drop files or click to upload a premium photograph</span>
+            <input type="file" id="petImage" accept="image/*" onchange="previewFile(this)">
+          </div>
+          
+          <div class="preview-container" id="previewContainer">
+            <img src="" id="imagePreview" class="preview-image" alt="Upload Preview">
+            <div class="preview-info">
+              <strong id="previewFilename">file.png</strong><br>
+              <span id="previewFilesize">0 KB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group full">
+          <label for="petDesc">Detailed Description</label>
+          <textarea id="petDesc" required placeholder="Describe pedigree lineage, vaccine history, personality, and physical attributes..."></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn-submit">Add New Pet Listing <i class="fas fa-chevron-right"></i></button>
+    </form>
+  </div>
+</div>
+
+<script>
+  if(!sessionStorage.getItem('adminToken')) window.location.href = 'index.html';
+  function logout() { sessionStorage.removeItem('adminToken'); window.location.href = 'index.html'; }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const editId = urlParams.get('edit');
+  if(editId) {
+    document.querySelector('h1 span').innerText = 'Edit Pet Specification';
+    document.querySelector('.btn-submit').innerHTML = 'Update Pet Listing <i class="fas fa-check"></i>';
+    fetch(`../api/get_pets.php?id=${editId}`)
+      .then(res => res.json())
+      .then(p => {
+        document.getElementById('petName').value = p.name;
+        document.getElementById('petCategory').value = p.category;
+        document.getElementById('petGender').value = p.gender;
+        document.getElementById('petAge').value = p.age;
+        document.getElementById('petDesc').value = p.description;
+        
+        if (p.image) {
+          const container = document.getElementById('previewContainer');
+          const preview = document.getElementById('imagePreview');
+          const filename = document.getElementById('previewFilename');
+          const sizeText = document.getElementById('previewFilesize');
+          
+          preview.src = p.image;
+          filename.innerText = "Current Active Image";
+          sizeText.innerText = "Loaded from storage";
+          container.style.display = "flex";
+        }
+      });
+  }
+
+  function previewFile(input) {
+    const container = document.getElementById('previewContainer');
+    const preview = document.getElementById('imagePreview');
+    const filename = document.getElementById('previewFilename');
+    const sizeText = document.getElementById('previewFilesize');
+    const file = input.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        preview.src = e.target.result;
+        filename.innerText = file.name;
+        sizeText.innerText = (file.size / 1024).toFixed(1) + " KB";
+        container.style.display = "flex";
+      };
+      reader.readAsDataURL(file);
+    } else {
+      container.style.display = "none";
+    }
+  }
+
+  document.getElementById('addPetForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const file = document.getElementById('petImage').files[0];
+    const payload = {
+      name: document.getElementById('petName').value,
+      category: document.getElementById('petCategory').value,
+      gender: document.getElementById('petGender').value,
+      age: document.getElementById('petAge').value,
+      description: document.getElementById('petDesc').value
+    };
+    if(editId) payload.id = editId;
+
+    if(file) {
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        payload.image = ev.target.result;
+        sendData(payload);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      // Keep existing image if editing and no new image is provided
+      if (editId) {
+        payload.image = document.getElementById('imagePreview').src;
+      }
+      sendData(payload);
+    }
+  });
+
+  function sendData(data) {
+    fetch('../api/add_pet.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(d => {
+      if(d.status === 'success') { 
+        alert(d.message); 
+        window.location.href = 'inventory.html'; 
+      } else {
+        alert("Error: " + d.message);
+      }
+    })
+    .catch(() => {
+      alert("Failed to submit request. Check database server connection.");
+    });
+  }
+</script>
+</body>
+</html>

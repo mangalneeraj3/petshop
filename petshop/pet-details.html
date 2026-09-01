@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="View details of this pet at Samaria Pet Shop. Certified healthy pets delivered across India." />
+  <meta name="keywords" content="Pet Details, Samaria Pet Shop" />
+  <title>Pet Details | Samaria Pet Shop</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+<body>
+<header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Samaria Pet Shop" style="height: 75px;" /></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+        <a href="pets.html" class="active">Pets <i class="fas fa-chevron-down" style="font-size:0.7em;"></i></a>
+        <div class="dropdown-content">
+          <a href="dogs.html">Dogs</a>
+          <a href="cats.html">Cats</a>
+          <a href="fish.html">Fish</a>
+          <a href="birds.html">Birds</a>
+          <a href="other.html">Other Pets</a>
+        </div>
+      </div>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://wa.me/919799911111" target="_blank" class="nav-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp Us</span>
+        </a>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars" id="hamburgerIcon"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <div class="mobile-dropdown" style="border-bottom: 1px solid rgba(0,0,0,0.08);">
+      <a href="javascript:void(0)" onclick="var c=document.getElementById('mobileDropContent'), i=document.getElementById('mobileDropIcon'); if(c.style.display==='none'){c.style.display='flex'; i.className='fas fa-chevron-up';}else{c.style.display='none'; i.className='fas fa-chevron-down';}" style="display:flex; justify-content:space-between; align-items:center; border-bottom:none;">Pets <i class="fas fa-chevron-down" id="mobileDropIcon"></i></a>
+      <div class="mobile-dropdown-content" id="mobileDropContent" style="display:none; flex-direction:column; padding-left:15px; background:rgba(0,0,0,0.05); border-radius: 4px; margin-bottom: 8px;">
+        <a href="dogs.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Dogs</a>
+        <a href="cats.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Cats</a>
+        <a href="birds.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Birds</a>
+        <a href="fish.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Fish</a>
+        <a href="other.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Other Pets</a>
+      </div>
+    </div>
+    <a href="services.html" onclick="toggleMenu()">Services</a>
+    <a href="blog.html" onclick="toggleMenu()">Blog</a>
+    <a href="about.html" onclick="toggleMenu()">About Us</a>
+    <a href="contact.html" onclick="toggleMenu()">Contact Us</a>
+    <a href="https://wa.me/919799911111" target="_blank" style="color:#25D366; margin-top:4px;">
+      <i class="fab fa-whatsapp"></i> WhatsApp: 97999 11111
+    </a>
+  </div>
+
+<main style="padding-top: var(--nav-h);">
+<section class="section-pad" style="background: var(--white); min-height: 70vh;">
+  <div class="container" id="dynamicPetContainer">
+    <!-- Content injected via JS -->
+    <div style="text-align:center; padding: 50px;">
+       <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--red); margin-bottom: 15px;"></i>
+       <h2>Loading Pet Details...</h2>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name" style="margin-bottom: 20px; display: inline-block; background-color: #ffffff; padding: 10px 20px; border-radius: var(--radius);"><img src="images/logo.png" alt="Samaria Pet Shop" style="height: 95px;" /></div>
+        <div class="footer-tagline">Your Pet · We Care</div>
+        <p class="footer-about">Providing healthy, certified, and loving pets to families across India since 1957. Your pet's happiness is our priority.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919799911111" target="_blank" class="footer-social"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="footer-social"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="pets.html">Shop by Pet</a></li>
+          <li><a href="blog.html">Our Blog</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Pet Categories</h4>
+        <ul>
+          <li><a href="dogs.html">Dogs</a></li>
+          <li><a href="cats.html">Cats</a></li>
+          <li><a href="birds.html">Birds</a></li>
+          <li><a href="fish.html">Fish</a></li>
+          <li><a href="other.html">Other Pets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>FAQ Questions</h4>
+        <ul>
+          <li><a href="faq.html#delivery">Do you deliver pan-India?</a></li>
+          <li><a href="faq.html#vaccination">Are the pets vaccinated?</a></li>
+          <li><a href="faq.html#returns">What is the return policy?</a></li>
+          <li><a href="faq.html#boarding">Do you offer pet boarding?</a></li>
+          <li><a href="faq.html#grooming">How do I book grooming?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#fff;font-size:.88rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px;">Contact Us</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>C1, Roop Plaza, M.I Road, Near JK Enterprise, Panch Batti, New Colony, Jaipur, Rajasthan 302001</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+919799911111" style="color:rgba(255,255,255,0.65);transition:color 0.2s;" onmouseover="this.style.color='#D4A445'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">+91 97999 11111</a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:samariapetshop24@gmail.com" style="color:rgba(255,255,255,0.65);transition:color 0.2s;" onmouseover="this.style.color='#D4A445'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">samariapetshop24@gmail.com</a>
+        </div>
+        <a href="https://wa.me/919799911111" target="_blank" class="btn btn-primary" style="margin-top:10px; font-size:0.82rem; padding:10px 20px;">
+          <i class="fab fa-whatsapp"></i> WhatsApp Us
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Samaria Pet Shop. All rights reserved.</p>
+      <p><a href="#" style="color:rgba(255,255,255,0.35); transition:color 0.2s;" onmouseover="this.style.color='#D4A445'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" style="color:rgba(255,255,255,0.35); transition:color 0.2s;" onmouseover="this.style.color='#D4A445'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Terms of Use</a></p>
+    </div>
+  </footer>
+
+<!-- ====== ENQUIRY MODAL ====== -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-title">Enquire About <span id="modalPetName" style="color:var(--red)"></span></div>
+    <p class="modal-sub">Fill in your details and we'll get back to you within 24 hours.</p>
+    <form id="enquiryForm" onsubmit="handleEnquiry(event)">
+      <div class="form-group">
+        <label for="enquiryName">Your Name</label>
+        <input type="text" id="enquiryName" placeholder="e.g. Rahul Sharma" required />
+      </div>
+      <div class="form-group">
+        <label for="enquiryPhone">Phone Number</label>
+        <input type="tel" id="enquiryPhone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required />
+      </div>
+      <div class="form-group">
+        <label for="enquiryMsg">Message (Optional)</label>
+        <textarea id="enquiryMsg" placeholder="Any specific questions or preferences..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+        <i class="fas fa-paper-plane"></i> Send Enquiry
+      </button>
+      <div id="enquiryFeedback" class="form-feedback"></div>
+    </form>
+  </div>
+</div>
+
+<script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    let menuOpen = false;
+
+    function toggleMenu() {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.add('open');
+        hamburgerIcon.className = 'fas fa-times';
+      } else {
+        mobileMenu.classList.remove('open');
+        hamburgerIcon.className = 'fas fa-bars';
+      }
+    }
+
+    function openModal(petName) {
+      document.getElementById('modalPetName').textContent = petName;
+      document.getElementById('enquiryForm').reset();
+      document.getElementById('enquiryFeedback').className = 'form-feedback';
+      document.getElementById('enquiryFeedback').textContent = '';
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function handleOverlayClick(e) {
+      if (e.target === document.getElementById('modalOverlay')) closeModal();
+    }
+
+    function handleEnquiry(e) {
+      e.preventDefault();
+      const petNameEl = document.getElementById('modalPetName');
+      const petName = petNameEl ? petNameEl.textContent : 'General Enquiry';
+      const name = document.getElementById('enquiryName').value;
+      const phone = document.getElementById('enquiryPhone').value;
+      const msg = document.getElementById('enquiryMsg').value;
+      
+      const newEnquiry = {
+        id: 'ENQ-' + Math.floor(Math.random() * 10000),
+        petName: petName,
+        customerName: name,
+        phone: phone,
+        message: msg,
+        status: 'New'
+      };
+      
+      fetch('api/enquiries.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newEnquiry)
+      })
+      .then(res => res.json())
+      .then(data => {
+        const fb = document.getElementById('enquiryFeedback');
+        fb.className = 'form-feedback success';
+        fb.textContent = '✓ Thank you! We will contact you within 24 hours.';
+        setTimeout(closeModal, 2200);
+      });
+    }
+    
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const petId = urlParams.get('id');
+      const container = document.getElementById('dynamicPetContainer');
+      
+      fetch(`api/get_pets.php?id=${petId}`)
+      .then(res => res.json())
+      .then(pet => {
+      if(pet && pet.name) {
+        document.title = pet.name + " | Samaria Pet Shop";
+        let descHtml = pet.description 
+            ? `<p style="line-height: 1.8; color: var(--text-soft); margin-bottom: 30px;">${pet.description.replace(/\\n/g, '<br>')}</p>` 
+            : `<p style="line-height: 1.8; color: var(--text-soft); margin-bottom: 30px;">A beautiful, healthy, and certified ${pet.category} waiting for a loving home.</p>`;
+            
+        container.innerHTML = `
+          <a href="${pet.category}.html" style="color: var(--text-soft); text-decoration: none; margin-bottom: 30px; display: inline-block; text-transform: capitalize;"><i class="fas fa-arrow-left"></i> Back to ${pet.category}</a>
+          <div class="grid-2" style="align-items: start;">
+            <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+              <img src="${pet.image}" alt="${pet.name}" style="width: 100%; height: auto; display: block;" />
+            </div>
+            <div>
+              <span style="display: inline-block; background: var(--black); color: #fff; padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; font-weight: bold; margin-bottom: 15px; text-transform: uppercase;">${pet.category}</span>
+              <h1 style="font-family: 'Playfair Display', serif; font-size: 2.8rem; color: var(--red); margin-bottom: 15px;">${pet.name}</h1>
+              <div style="display: flex; gap: 20px; margin-bottom: 30px; color: var(--text-soft);">
+                <span><i class="fas fa-venus-mars" style="color: var(--red);"></i> ${pet.gender}</span>
+                <span><i class="fas fa-birthday-cake" style="color: var(--red);"></i> ${pet.age}</span>
+                <span><i class="fas fa-certificate" style="color: var(--red);"></i> Certified Healthy</span>
+              </div>
+              <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 10px;">About This Pet</h3>
+              ${descHtml}
+              <div style="display: flex; gap: 15px;">
+                <button onclick="openModal('${pet.name}')" class="btn btn-primary" style="flex: 1; justify-content: center;"><i class="fas fa-paper-plane"></i> Enquire Now</button>
+                <a href="https://wa.me/919799911111?text=Hi, I am interested in ${pet.name}" target="_blank" class="btn btn-outline" style="background: #25D366; color: white; border-color: #25D366; display: flex; align-items: center; justify-content: center;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        container.innerHTML = `
+          <div style="text-align:center; padding: 100px 20px;">
+             <h2 style="color: var(--red); font-family: 'Playfair Display', serif; margin-bottom:20px;">Pet Not Found</h2>
+             <p style="color: var(--text-soft); margin-bottom: 30px;">The pet you are looking for may have been adopted or removed.</p>
+             <a href="pets.html" class="btn btn-primary">Browse All Pets</a>
+          </div>
+        `;
+      }
+      });
+    });
+  </script>
+</body>
+</html>

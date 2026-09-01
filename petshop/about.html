@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the legacy of Samaria Pet Shop Jaipur. Estabilshed in 1957, we are Jaipur's leading ethical pet breeders of KCI registered puppies, kittens, birds, and fish." />
+  <meta name="keywords" content="Best Pet Store in Jaipur, KCI Registered Puppies Jaipur, Ethical Breeders Rajasthan, Pet Shop Legacy Jaipur, Purebred Persian Cats Jaipur" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://samariapetshop.com/about.html" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://samariapetshop.com/about.html" />
+  <meta property="og:title" content="About Our Legacy | Samaria Pet Shop Jaipur" />
+  <meta property="og:description" content="Discover Jaipur's premier ethical pet sanctuary since 1957. Certified healthy pedigree lineages." />
+  <meta property="og:image" content="https://samariapetshop.com/images/logo.png" />
+
+  <!-- JSON-LD Structured Data Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Samaria Pet Shop",
+    "description": "Established in 1957, Samaria Pet Shop is Jaipur's most trusted name for healthy, certified purebred pets and comprehensive care.",
+    "publisher": {
+      "@type": "PetStore",
+      "name": "Samaria Pet Shop",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://samariapetshop.com/images/logo.png"
+      }
+    }
+  }
+  </script>
+  <title>About Our Legacy | Samaria Pet Shop Jaipur</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Samaria Pet Shop" style="height: 62px;" />
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <a href="pets.html">Pets <i class="fas fa-chevron-down" style="font-size:0.7em;"></i></a>
+          <div class="dropdown-content">
+            <a href="dogs.html">Dogs</a>
+            <a href="cats.html">Cats</a>
+            <a href="fish.html">Fish</a>
+            <a href="birds.html">Birds</a>
+            <a href="other.html">Other Pets</a>
+          </div>
+        </div>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://wa.me/919799911111" target="_blank" class="nav-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp Us</span>
+        </a>
+        
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars" id="hamburgerIcon"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <div class="mobile-dropdown" style="border-bottom: 1px solid rgba(0,0,0,0.08);">
+      <a href="javascript:void(0)" onclick="var c=document.getElementById('mobileDropContent'), i=document.getElementById('mobileDropIcon'); if(c.style.display==='none'){c.style.display='flex'; i.className='fas fa-chevron-up';}else{c.style.display='none'; i.className='fas fa-chevron-down';}" style="display:flex; justify-content:space-between; align-items:center; border-bottom:none;">Pets <i class="fas fa-chevron-down" id="mobileDropIcon"></i></a>
+      <div class="mobile-dropdown-content" id="mobileDropContent" style="display:none; flex-direction:column; padding-left:15px; background:rgba(0,0,0,0.05); border-radius: 4px; margin-bottom: 8px;">
+        <a href="dogs.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Dogs</a>
+        <a href="cats.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Cats</a>
+        <a href="birds.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Birds</a>
+        <a href="fish.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Fish</a>
+        <a href="other.html" onclick="toggleMenu()" style="border-bottom:none; padding: 8px 0;">Other Pets</a>
+      </div>
+    </div>
+    <a href="services.html" onclick="toggleMenu()">Services</a>
+    <a href="blog.html" onclick="toggleMenu()">Blog</a>
+    <a href="about.html" onclick="toggleMenu()">About Us</a>
+    <a href="contact.html" onclick="toggleMenu()">Contact Us</a>
+    <a href="https://wa.me/919799911111" target="_blank" style="color:#25D366; margin-top:4px;">
+      <i class="fab fa-whatsapp"></i> WhatsApp: 97999 11111
+    </a>
+  </div>
+
+  <main>
+    <!-- Floating Background Particles (Paw/Heart Drifter) -->
+    <div id="particle-container" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; overflow:hidden;"></div>
+
+    <!-- ====== ABOUT HERO ====== -->
+    <section class="about-hero-wrap" style="background: linear-gradient(135deg, rgba(30, 7, 7, 0.86) 0%, rgba(185, 28, 28, 0.8) 100%), url('images/hero_banner.png') no-repeat center center / cover; color: #fff; padding: 180px 24px 120px; text-align: center; position: relative; overflow: hidden; z-index: 1;">
+      <!-- Aesthetic light elements -->
+      <div style="position: absolute; top: -150px; right: -100px; width: 450px; height: 450px; background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%); border-radius: 50%;"></div>
+      <div style="position: absolute; bottom: -100px; left: -100px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(185, 28, 28, 0.2) 0%, transparent 70%); border-radius: 50%;"></div>
+      
+      <div class="container" style="position: relative; z-index: 2;">
+        <span class="section-label-gold" style="color: var(--gold); border: 1.5px solid var(--gold); padding: 6px 16px; border-radius: 30px; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; display: inline-block; margin-bottom: 20px; background: rgba(245,158,11,0.06);">Our Heritage</span>
+        <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 5vw, 4.2rem); font-weight: 800; margin-bottom: 20px; letter-spacing: -0.01em; line-height: 1.15; text-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+          Our Legacy of <span style="background: linear-gradient(to right, var(--gold-light), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Unconditional Love</span>
+        </h1>
+        <p style="font-size: 1.15rem; color: rgba(255,255,255,0.85); max-width: 700px; margin: 0 auto; line-height: 1.8; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300;">
+          For over 65 years, Samaria Pet Shop has stood as Jaipur's premier sanctuary for ethical breeding, health-certified lineage, and compassionate lifetime support.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== OUR STORY SECTION ====== -->
+    <section class="section-pad" style="background: var(--cream); position: relative; z-index: 1;">
+      <div class="container">
+        <div class="why-layout reveal" style="align-items: center;">
+          <div style="order: 2;">
+            <div class="why-image-wrap" style="position: relative;">
+              <img src="images/hero_banner.png" alt="Our History" class="why-img-main" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); border: 4px solid var(--white);">
+              <div class="why-badge" style="bottom: 25px; left: -25px; right: auto; background: var(--red-dark); box-shadow: 0 10px 25px rgba(185, 28, 28, 0.25);">
+                <div class="why-badge-num" style="color: var(--white);">1957</div>
+                <div class="why-badge-txt" style="color: rgba(255,255,255,0.75);">Established</div>
+              </div>
+              <!-- Floating Luxury Gold Trust Seal Stamp -->
+              <div class="luxury-seal" style="top: -25px; right: -25px;">
+                <div class="seal-inner">
+                  <i class="fas fa-award"></i>
+                  <span>65+ YEARS<br>OF INTEGRITY</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="order: 1; padding-right: 30px;">
+            <span class="section-label" style="color: var(--red);">The Beginning</span>
+            <h2 class="section-title" style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.2; margin-bottom: 24px; font-weight: 800;">Jaipur's Dedicated Pioneer of Compassion</h2>
+            
+            <p style="color: var(--text-soft); line-height: 1.85; margin-bottom: 20px; font-size: 1.02rem; font-family: 'Plus Jakarta Sans', sans-serif;">
+              Established in <strong>1957</strong>, Samaria Pet Shop was built on a singular, enduring baseline: every pet is an irreplaceable member of the family, and every household deserves the pure happiness they bring. What started as an intimate, veterinary-first sanctuary has grown into Jaipur's absolute landmark for high-quality pet care.
+            </p>
+            <p style="color: var(--text-soft); line-height: 1.85; margin-bottom: 30px; font-size: 1.02rem; font-family: 'Plus Jakarta Sans', sans-serif;">
+              Over six generations, we have maintained a strict, zero-compromise policy on animal housing conditions, health certification profiles, and veterinary-supervised nutrition charts. We don't just bridge pet purchases—we foster permanent, lifelong matches with premium advice.
+            </p>
+            
+            <div style="display: flex; gap: 20px; align-items: center; padding-top: 24px; border-top: 1px dashed rgba(185, 28, 28, 0.15);">
+              <div style="width: 54px; height: 54px; border-radius: 50%; background: var(--red); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.3rem; box-shadow: 0 6px 15px rgba(185, 28, 28, 0.2);">
+                <i class="fas fa-certificate" style="color: var(--gold);"></i>
+              </div>
+              <div>
+                <div style="font-weight: 700; color: var(--text); font-size: 1.1rem; font-family: 'Plus Jakarta Sans', sans-serif;">65 Years of Certified Trust</div>
+                <div style="color: var(--text-soft); font-size: 0.88rem; font-family: 'Plus Jakarta Sans', sans-serif;">Guarantees ethical breed custody and healthy lineage certificates.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== MISSION & VISION ====== -->
+    <section class="section-pad" style="background: var(--white); position: relative; z-index: 1;">
+      <div class="container">
+        <div class="grid-2" style="gap: 40px;">
+          
+          <div class="reveal reveal-delay-1" style="background: var(--cream); padding: 50px; border-radius: var(--radius-lg); border-bottom: 4px solid var(--red); box-shadow: var(--shadow-lg); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-xl)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow-lg)';">
+            <div style="width: 70px; height: 70px; background: rgba(185,28,28,0.06); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.3rem; color: var(--red); margin-bottom: 25px;">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--text); margin-bottom: 18px; font-weight: 800;">Our Mission</h3>
+            <p style="color: var(--text-soft); line-height: 1.8; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.96rem;">
+              To strictly provide healthy, fully dewormed, and microchipped pets to families, backed by systematic after-sale vet chats, professional clinical grooming, and specialized diet support systems that ensure your pet's life begins on the best foot.
+            </p>
+          </div>
+          
+          <div class="reveal reveal-delay-2" style="background: var(--cream); padding: 50px; border-radius: var(--radius-lg); border-bottom: 4px solid var(--gold); box-shadow: var(--shadow-lg); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-xl)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow-lg)';">
+            <div style="width: 70px; height: 70px; background: rgba(245,158,11,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.3rem; color: var(--gold); margin-bottom: 25px;">
+              <i class="fas fa-gem"></i>
+            </div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--text); margin-bottom: 18px; font-weight: 800;">Our Vision</h3>
+            <p style="color: var(--text-soft); line-height: 1.8; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.96rem;">
+              To stand as India's golden benchmark for animal welfare and pet retail. We consistently establish standards in hygienic breeder checks, and deliver digital advice frameworks to encourage compassionate, highly educated pet ownership nationwide.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CORE VALUES ====== -->
+    <section class="section-pad" style="background: var(--cream); position: relative; z-index: 1;">
+      <div class="container">
+        <div class="reveal" style="text-align: center; margin-bottom: 60px;">
+          <span class="section-label">Why Trust Us</span>
+          <h2 class="section-title" style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;">Our Three Golden Values</h2>
+        </div>
+        
+        <div class="grid-3" style="gap: 30px;">
+          
+          <!-- Value 1 -->
+          <div class="reveal reveal-delay-1" style="text-align: center; padding: 40px 30px; background: var(--white); border-radius: var(--radius-lg); border: 1px solid rgba(185,28,28,0.06); box-shadow: var(--shadow-sm); transition: var(--transition);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow-sm)';">
+            <div style="width: 76px; height: 76px; background: rgba(185,28,28,0.06); color: var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 24px; box-shadow: 0 4px 12px rgba(185, 28, 28, 0.05); transition: transform 0.4s ease;" onmouseover="this.style.transform='rotateY(360deg)';">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 14px; font-family: 'Playfair Display', serif; color: var(--text);">100% Ethical Lineage</h4>
+            <p style="color: var(--text-soft); font-size: 0.9rem; line-height: 1.7; font-family: 'Plus Jakarta Sans', sans-serif;">We partner exclusively with verified and registered lineage breeders, guaranteeing that all parents live in loving, clean environments.</p>
+          </div>
+
+          <!-- Value 2 -->
+          <div class="reveal reveal-delay-2" style="text-align: center; padding: 40px 30px; background: var(--white); border-radius: var(--radius-lg); border: 1px solid rgba(185,28,28,0.06); box-shadow: var(--shadow-sm); transition: var(--transition);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow-sm)';">
+            <div style="width: 76px; height: 76px; background: rgba(245,158,11,0.08); color: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 24px; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.08); transition: transform 0.4s ease;" onmouseover="this.style.transform='rotateY(360deg)';">
+              <i class="fas fa-hand-holding-medical"></i>
+            </div>
+            <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 14px; font-family: 'Playfair Display', serif; color: var(--text);">Complete Vet Checkups</h4>
+            <p style="color: var(--text-soft); font-size: 0.9rem; line-height: 1.7; font-family: 'Plus Jakarta Sans', sans-serif;">Every pet transitions home with an authenticated medical portfolio, official immunization record tags, and dynamic health histories.</p>
+          </div>
+
+          <!-- Value 3 -->
+          <div class="reveal reveal-delay-3" style="text-align: center; padding: 40px 30px; background: var(--white); border-radius: var(--radius-lg); border: 1px solid rgba(185,28,28,0.06); box-shadow: var(--shadow-sm); transition: var(--transition);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow-sm)';">
+            <div style="width: 76px; height: 76px; background: rgba(185,28,28,0.06); color: var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 24px; box-shadow: 0 4px 12px rgba(185, 28, 28, 0.05); transition: transform 0.4s ease;" onmouseover="this.style.transform='rotateY(360deg)';">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 14px; font-family: 'Playfair Display', serif; color: var(--text);">Lifetime Consultation</h4>
+            <p style="color: var(--text-soft); font-size: 0.9rem; line-height: 1.7; font-family: 'Plus Jakarta Sans', sans-serif;">We are here for you long after purchase. Reach out 24/7 for tailored guidance on feeding habits, developmental training, and behavior charts.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CTA BANNER ====== -->
+    <section class="cta-banner reveal" style="margin-top: -50px; margin-bottom: 25px; position: relative; z-index: 2;">
+      <div class="cta-banner-inner">
+        <h2>Become Part of the Family</h2>
+        <p>Visit our flagship store in Jaipur to meet our adorable pets and speak with our expert consultants today.</p>
+        <div class="cta-banner-btns">
+          <a href="pets.html" class="btn btn-white">View Available Pets</a>
+          <a href="contact.html" class="btn" style="background:rgba(255,255,255,0.15); color:#fff; border:1.5px solid rgba(255,255,255,0.4);">
+            <i class="fas fa-map-marker-alt"></i> Get Directions
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name" style="margin-bottom: 20px; display: inline-block; background-color: #ffffff; padding: 10px 20px; border-radius: var(--radius);"><img src="images/logo.png" alt="Samaria Pet Shop" style="height: 95px;" /></div>
+        <div class="footer-tagline">Your Pet · We Care</div>
+        <p class="footer-about">Providing healthy, certified, and loving pets to families across India since 1957. Your pet's happiness is our priority.</p>
+        <div class="footer-socials" style="margin-bottom: 20px;">
+          <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919799911111" target="_blank" class="footer-social"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="footer-social"><i class="fab fa-youtube"></i></a>
+        </div>
+        <!-- Footer Trust Seals -->
+        <div class="footer-trust-seals" style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <div class="mini-seal"><i class="fas fa-award"></i> KCI Registered</div>
+          <div class="mini-seal"><i class="fas fa-shield-virus"></i> Vet Certified</div>
+          <div class="mini-seal"><i class="fas fa-truck-moving"></i> Safe Delivery</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="pets.html">Shop by Pet</a></li>
+          <li><a href="blog.html">Our Blog</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Pet Categories</h4>
+        <ul>
+          <li><a href="dogs.html">Dogs</a></li>
+          <li><a href="cats.html">Cats</a></li>
+          <li><a href="birds.html">Birds</a></li>
+          <li><a href="fish.html">Fish</a></li>
+          <li><a href="other.html">Other Pets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>FAQ Questions</h4>
+        <ul>
+          <li><a href="faq.html#delivery">Do you deliver pan-India?</a></li>
+          <li><a href="faq.html#vaccination">Are the pets vaccinated?</a></li>
+          <li><a href="faq.html#returns">What is the return policy?</a></li>
+          <li><a href="faq.html#boarding">Do you offer pet boarding?</a></li>
+          <li><a href="faq.html#grooming">How do I book grooming?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="color:#fff;font-size:.88rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px;">Contact Us</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>C1, Roop Plaza, M.I Road, Near JK Enterprise, Panch Batti, New Colony, Jaipur, Rajasthan 302001</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+919799911111" style="color:rgba(255,255,255,0.65);transition:color 0.2s;" onmouseover="this.style.color='#D4A445'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">+91 97999 11111</a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:samariapetshop24@gmail.com" style="color:rgba(255,255,255,0.65);transition:color 0.2s;" onmouseover="this.style.color='#D4A445'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">samariapetshop24@gmail.com</a>
+        </div>
+        <a href="https://wa.me/919799911111" target="_blank" class="btn btn-primary" style="margin-top:10px; font-size:0.82rem; padding:10px 20px;">
+          <i class="fab fa-whatsapp"></i> WhatsApp Us
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Samaria Pet Shop. All rights reserved.</p>
+      <p><a href="#" style="color:rgba(255,255,255,0.35); transition:color 0.2s;" onmouseover="this.style.color='#D4A445'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" style="color:rgba(255,255,255,0.35); transition:color 0.2s;" onmouseover="this.style.color='#D4A445'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Terms of Use</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // =============================================
+    // NAVBAR SCROLL EFFECT
+    // =============================================
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // =============================================
+    // MOBILE MENU
+    // =============================================
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    let menuOpen = false;
+
+    function toggleMenu() {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.add('open');
+        hamburgerIcon.className = 'fas fa-times';
+      } else {
+        mobileMenu.classList.remove('open');
+        hamburgerIcon.className = 'fas fa-bars';
+      }
+    }
+
+    // =============================================
+    // SCROLL REVEAL
+    // =============================================
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // =============================================
+    // DYNAMIC FLOATING PARTICLES GENERATOR
+    // =============================================
+    const particleContainer = document.getElementById('particle-container');
+    const particlePool = ['<i class="fa-solid fa-paw"></i>', '<i class="fa-solid fa-heart"></i>'];
+    
+    function createParticle() {
+      if (document.hidden) return;
+      const element = document.createElement('div');
+      element.className = 'floating-particle';
+      element.innerHTML = particlePool[Math.floor(Math.random() * particlePool.length)];
+      
+      const size = Math.random() * 16 + 10; // 10px to 26px
+      const left = Math.random() * 100; // 0% to 100% viewport width
+      const duration = Math.random() * 8 + 6; // 6s to 14s
+      const delay = Math.random() * 3;
+      
+      element.style.fontSize = `${size}px`;
+      element.style.left = `${left}%`;
+      element.style.animationDuration = `${duration}s`;
+      element.style.animationDelay = `${delay}s`;
+      
+      particleContainer.appendChild(element);
+      
+      setTimeout(() => {
+        element.remove();
+      }, (duration + delay) * 1000);
+    }
+    
+    // Spawn particles systematically
+    for(let i=0; i<8; i++) {
+      createParticle();
+    }
+    setInterval(createParticle, 1200);
+  </script>
+</body>
+</html>

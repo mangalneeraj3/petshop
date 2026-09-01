@@ -1,0 +1,19 @@
+# Robots.txt for Samaria Pet Shop - Optimized for SEO and AI Search Agents
+User-agent: *
+Allow: /
+Allow: /images/
+Allow: /style.css
+Allow: /script.js
+
+# Disallow administrative dashboard and backend API endpoints
+Disallow: /admin/
+Disallow: /api/
+Disallow: /tmp/
+Disallow: /*?edit=
+Disallow: /*?id=
+
+# Crawl-delay to prevent server over-utilization
+Crawl-delay: 5
+
+# Link to the official website XML sitemap
+Sitemap: https://samariapetshop.com/sitemap.xml

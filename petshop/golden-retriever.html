@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet our Golden Retriever at Samaria Pet Shop Jaipur. Friendly, intelligent, and healthy family companions." />
+  <title>Golden Retriever | Samaria Pet Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+<body>
+<header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Samaria Pet Shop" style="height: 75px;" /></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <a href="pets.html" class="active">Pets <i class="fas fa-chevron-down" style="font-size:0.7em;"></i></a>
+          <div class="dropdown-content">
+            <a href="dogs.html">Dogs</a>
+            <a href="cats.html">Cats</a>
+            <a href="fish.html">Fish</a>
+            <a href="birds.html">Birds</a>
+            <a href="other.html">Other Pets</a>
+          </div>
+        </div>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://wa.me/919799911111" target="_blank" class="nav-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp Us</span>
+        </a>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars" id="hamburgerIcon"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<main style="padding-top: var(--nav-h);">
+  <section class="section-pad">
+    <div class="container">
+      <a href="dogs.html" style="color: var(--text-soft); text-decoration: none; margin-bottom: 30px; display: inline-block;"><i class="fas fa-arrow-left"></i> Back to Dogs</a>
+      <div class="grid-2">
+        <div><img src="images/golden_retriever.png" alt="Golden Retriever" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);" /></div>
+        <div>
+          <span style="display: inline-block; background: var(--red); color: #fff; padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; font-weight: bold; margin-bottom: 15px; text-transform: uppercase;">DOGS</span>
+          <h1 style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--text); margin-bottom: 15px;">Golden Retriever</h1>
+          <div style="display: flex; gap: 20px; margin-bottom: 30px; color: var(--text-soft);">
+            <span><i class="fas fa-venus-mars"></i> Male/Female</span>
+            <span><i class="fas fa-birthday-cake"></i> 2-3 Months</span>
+          </div>
+          <p style="line-height: 1.8; color: var(--text-soft); margin-bottom: 30px;">The Golden Retriever is one of the most popular dog breeds in India. Known for their friendly, tolerant attitudes, they make fantastic family pets and are highly intelligent, making them easy to train.</p>
+          <a href="#" class="btn btn-primary" onclick="openModal('Golden Retriever'); return false;">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name" style="margin-bottom: 20px; display: inline-block; background-color: #ffffff; padding: 10px 20px; border-radius: var(--radius);"><img src="images/logo.png" alt="Samaria Pet Shop" style="height: 95px;" /></div>
+        <p>&copy; 2026 Samaria Pet Shop. All rights reserved.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Our Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+</footer>
+</body>
+</html>

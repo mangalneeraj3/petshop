@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure Admin Settings for Samaria Pet Shop.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Security Settings | Samaria Admin Portal</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --red: #B91C1C;
+      --red-dark: #7F1D1D;
+      --gold: #D4A445;
+      --gold-light: #F59E0B;
+      --black: #0B0B0C;
+      --black-light: #121214;
+      --cream: #FDFBF7;
+      --cream-dark: #F4EFEB;
+      --white: #FFFFFF;
+      --sidebar: #121214;
+      --text: #1F2937;
+      --text-soft: #6B7280;
+      --radius: 12px;
+      --radius-lg: 18px;
+      --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ====== SIDEBAR ====== */
+    .sidebar {
+      width: 280px;
+      background: var(--sidebar);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid rgba(212, 164, 69, 0.12);
+      z-index: 10;
+      position: relative;
+    }
+
+    .sidebar-brand {
+      padding: 30px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
+    }
+
+    .sidebar-brand img {
+      height: 64px;
+      background: var(--white);
+      padding: 8px 18px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: var(--transition);
+    }
+
+    .sidebar-brand img:hover {
+      transform: scale(1.03);
+    }
+
+    .sidebar-nav {
+      flex: 1;
+      padding: 24px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .nav-item {
+      padding: 14px 16px;
+      color: #9CA3AF;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-radius: var(--radius);
+      font-size: 0.94rem;
+      font-weight: 500;
+      transition: var(--transition);
+      border-left: 3px solid transparent;
+    }
+
+    .nav-item:hover, .nav-item.active {
+      background: rgba(255, 255, 255, 0.03);
+      color: #fff;
+      border-left-color: var(--gold);
+    }
+
+    .nav-item i {
+      font-size: 1.1rem;
+      transition: var(--transition);
+    }
+
+    .nav-item:hover i, .nav-item.active i {
+      color: var(--gold);
+    }
+
+    .logout-btn {
+      padding: 18px 24px;
+      color: #F87171;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .logout-btn:hover {
+      background: rgba(239, 68, 68, 0.05);
+      color: #EF4444;
+    }
+
+    /* ====== MAIN AREA ====== */
+    .main-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 40px 50px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      border-bottom: 1.5px solid var(--cream-dark);
+      padding-bottom: 24px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--black);
+      letter-spacing: -0.01em;
+    }
+
+    .header h1 span {
+      background: linear-gradient(to right, var(--red), var(--red-dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .user-profile-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--white);
+      padding: 8px 16px;
+      border-radius: 30px;
+      border: 1px solid rgba(212, 164, 69, 0.12);
+      box-shadow: var(--shadow);
+    }
+
+    .user-avatar {
+      width: 32px;
+      height: 32px;
+      background: var(--red);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .user-name {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    /* ====== CARDS ====== */
+    .card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(212, 164, 69, 0.08);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--red);
+      margin-bottom: 30px;
+      border-bottom: 1.5px solid var(--cream-dark);
+      padding-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ====== FORMS ====== */
+    .form-group {
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 0.8rem;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-wrapper i.prefix-icon {
+      position: absolute;
+      left: 16px;
+      color: var(--text-soft);
+      font-size: 1.05rem;
+      transition: var(--transition);
+    }
+
+    .input-wrapper input {
+      width: 100%;
+      padding: 14px 16px 14px 46px;
+      background: var(--cream);
+      border: 1.5px solid var(--cream-dark);
+      border-radius: var(--radius);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.98rem;
+      color: var(--text);
+      outline: none;
+      transition: var(--transition);
+      box-sizing: border-box;
+    }
+
+    .input-wrapper input:focus {
+      border-color: var(--gold);
+      background: var(--white);
+      box-shadow: 0 0 15px rgba(212, 164, 69, 0.10);
+    }
+
+    .input-wrapper input:focus + i.prefix-icon {
+      color: var(--gold);
+    }
+
+    .toggle-pass {
+      position: absolute;
+      right: 16px;
+      color: var(--text-soft);
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .toggle-pass:hover {
+      color: var(--gold);
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+      color: #fff;
+      border: none;
+      padding: 16px 35px;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: var(--transition);
+      box-shadow: 0 4px 20px rgba(185, 28, 28, 0.2);
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(185, 28, 28, 0.3);
+      background: linear-gradient(135deg, #D32F2F 0%, var(--red) 100%);
+    }
+  </style>
+  <link rel="icon" type="image/png" href="../images/logo.png" />
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-brand">
+    <img src="../images/logo.png" alt="Samaria Admin">
+  </div>
+  <div class="sidebar-nav">
+    <a href="dashboard.html" class="nav-item"><i class="fas fa-chart-line"></i> Dashboard Overview</a>
+    <a href="add-pet.html" class="nav-item"><i class="fas fa-plus-circle"></i> Add New Pet</a>
+    <a href="inventory.html" class="nav-item"><i class="fas fa-list"></i> Manage Inventory</a>
+    <a href="blogs.html" class="nav-item"><i class="fas fa-blog"></i> Manage Blogs</a>
+    <a href="enquiries.html" class="nav-item"><i class="fas fa-envelope"></i> View Enquiries</a>
+    <a href="settings.html" class="nav-item active"><i class="fas fa-shield-alt"></i> Security Settings</a>
+  </div>
+  <a onclick="logout()" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Secure Logout</a>
+</div>
+
+<div class="main-content">
+  <div class="header">
+    <h1><span>Security Settings</span></h1>
+    <div class="user-profile-badge">
+      <div class="user-avatar">A</div>
+      <div class="user-name">Administrator</div>
+    </div>
+  </div>
+
+  <div class="card" style="max-width: 540px; margin: 0 auto;">
+    <h2><span><i class="fas fa-key"></i> Update Credentials</span></h2>
+    
+    <form id="passwordForm">
+      <div class="form-group">
+        <label for="newPass">New Security Password</label>
+        <div class="input-wrapper">
+          <input type="password" id="newPass" required placeholder="Type new secure passphrase">
+          <i class="fas fa-lock prefix-icon"></i>
+          <i class="fas fa-eye toggle-pass" onclick="togglePasswordVisibility('newPass', this)"></i>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="confirmPass">Confirm Password</label>
+        <div class="input-wrapper">
+          <input type="password" id="confirmPass" required placeholder="Retype secure passphrase">
+          <i class="fas fa-check-circle prefix-icon"></i>
+          <i class="fas fa-eye toggle-pass" onclick="togglePasswordVisibility('confirmPass', this)"></i>
+        </div>
+      </div>
+      
+      <button type="submit" class="btn-submit">Update Credentials <i class="fas fa-shield-alt" style="margin-left: 6px;"></i></button>
+    </form>
+  </div>
+</div>
+
+<script>
+  if(!sessionStorage.getItem('adminToken')) window.location.href = 'index.html';
+  function logout() { sessionStorage.removeItem('adminToken'); window.location.href = 'index.html'; }
+
+  function togglePasswordVisibility(fieldId, icon) {
+    const field = document.getElementById(fieldId);
+    if (field.type === 'password') {
+      field.type = 'text';
+      icon.className = 'fas fa-eye-slash toggle-pass';
+    } else {
+      field.type = 'password';
+      icon.className = 'fas fa-eye toggle-pass';
+    }
+  }
+
+  document.getElementById('passwordForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const p1 = document.getElementById('newPass').value;
+    const p2 = document.getElementById('confirmPass').value;
+    if(p1 !== p2) return alert('✗ Verification failed: Passwords do not match.');
+
+    fetch('../api/reset_password.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username: 'admin', new_password: p1 })
+    })
+    .then(res => res.json())
+    .then(d => {
+      if(d.status === 'success') {
+        alert('✓ Admin credentials successfully updated!');
+        document.getElementById('passwordForm').reset();
+      } else {
+        alert('Error: ' + d.message);
+      }
+    })
+    .catch(err => {
+      alert('Network communication failure. Please verify connection.');
+    });
+  });
+</script>
+</body>
+</html>
