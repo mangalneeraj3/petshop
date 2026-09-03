@@ -10,9 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 $host = 'host.docker.internal';
+$port = 3307;
 $db   = 'u786772956_petshop';
-$user = 'root'; // Default XAMPP/WAMP username
-$pass = '12345678';     // Default XAMPP/WAMP password
+$user = 'petshop_app';
+$pass = '12345';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass);
