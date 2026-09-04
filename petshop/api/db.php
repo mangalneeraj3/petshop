@@ -13,7 +13,7 @@ $host = 'database-2.cn8esmuiatpb.ap-south-1.rds.amazonaws.com';
 $port = 3306;
 $db   = 'u786772956_petshop';
 $user = 'petshop_app';
-$pass = '12345';
+$pass = 'neerajmangal';
 
 try {
     // Notice: port=$port is now included in the DSN
