@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    container_name: petshop-web
+    ports:
+      - "80:80"
+    restart: unless-stopped
+
+
+
+
+
+
+
+
