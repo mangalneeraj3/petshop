@@ -9,8 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-$host = 'host.docker.internal';
-$port = 3307;
+$host = 'database-2.cn8esmuiatpb.ap-south-1.rds.amazonaws.com';
+$port = 3306;
 $db   = 'u786772956_petshop';
 $user = 'petshop_app';
 $pass = '12345';
